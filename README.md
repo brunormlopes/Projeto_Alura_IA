@@ -30,7 +30,7 @@ for m in genai.list_models():
   if 'embedContent' in m.supported_generation_methods:
     print(m.name)
 ```
-## Documentos de auxilio
+## Documentos informativos
 ```bash
   DOCUMENT1 = {
       "Título": "Abrigos para Vítimas das Enchentes no Rio Grande do Sul",
@@ -104,7 +104,7 @@ def embed_fn(title, text):
   df["Embeddings"] = df.apply(lambda row: embed_fn(row["Titulo"], row["Conteudo"]), axis=1)
   df
 ```
-## Função para gerar e buscar a consulta
+## Função para comparar a consulta do usuario com os textos
 ```bash
   def gerar_e_buscar_consulta(consulta, base, model):
   embedding_da_consulta = genai.embed_content(model=model,
@@ -116,11 +116,11 @@ def embed_fn(title, text):
   indice = np.argmax(produtos_escalares)
   return df.iloc[indice]["Conteudo"]
 ```
-## Chama a função passando a consulta, o data frame e o modelo
+## Chama a função passando o prompt (consulta do usuário), o data frame e o modelo
 ```bash
-consulta = "Como faço para trocar marchas em um carro do Google?"
+prompt = input('Esperando Prompt: ')
 
-trecho = gerar_e_buscar_consulta(consulta, df, model)
+trecho = gerar_e_buscar_consulta(prompt, df, model)
 print(trecho)
 ```
 ## Configurações do Gemini para nova busca
@@ -130,7 +130,7 @@ print(trecho)
     "candidate_count": 1
   }
 ```
-## Usando o Gemini 1.0 Pro para reescrever o texto passando as configurações 
+## Usando o Gemini 1.0 Pro para reescrever o texto passando as configurações para que o mesmo fique mais amigável ao usuário.
 ```bash
   prompt = f"Reescreva esse texto de uma forma mais amigável, sem adicionar informações que não façam parte do texto: {trecho}"
   
