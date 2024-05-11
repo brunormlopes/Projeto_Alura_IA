@@ -132,7 +132,7 @@ print(trecho)
 ```
 ## Usando o Gemini 1.0 Pro para reescrever o texto passando as configurações 
 ```bash
-  prompt = f"Reescreva esse texto de uma forma mais descontraída, sem adicionar informações que não façam parte do texto: {trecho}"
+  prompt = f"Reescreva esse texto de uma forma mais amigável, sem adicionar informações que não façam parte do texto: {trecho}"
   
   model_2 = genai.GenerativeModel("gemini-1.0-pro",
                                   generation_config=generation_config)
