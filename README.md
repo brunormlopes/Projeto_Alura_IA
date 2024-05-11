@@ -1,6 +1,6 @@
 # Projeto de IA para apoio a situaçãoes de desastre.
 
-Este projeto utiliza as LLMS e IA Generativa para analisar documentos relacionados a uma crise e dar respostas rápidas às pessoas atingidas e todos que se propuserem a ajudar.
+Este projeto utiliza as LLMS e IA Generativa para analisar documentos relacionados a uma crise e dar respostas rápidas às pessoas atingidas e todos que se propuserem a ajudar. Vamos usar o caso da atual tragédia do Rio Grande do Sul para exemplificar, onde serão inputados textos mais próximos da realidade, com o objetivo de responder adequadamente ajudando os as pessoas que precisam de informaçãoes o mais rápido possível.
 
 ## Pré-requisitos
 
@@ -43,27 +43,41 @@ Voluntariado: Você também pode se voluntariar para ajudar nos abrigos ou em ou
   
   DOCUMENT2 = {
       "Título": "Centros de doação oficiais",
-      "Conteúdo": "Defesa Civil do Rio Grande do Sul:
-	        Porto Alegre: 
-		          Centro Administrativo Fernando Ferrari (Caff) - Avenida Borges de Medeiros, 1.501 - Praia de Belas.
-		          Palácio Piratini - Praça Marechal Deodoro, s/nº - Centro.
+      "Conteúdo": "
+	  Defesa Civil do Rio Grande do Sul:
+		Porto Alegre: 
+	  	Centro Administrativo Fernando Ferrari (Caff) - Avenida Borges de Medeiros, 1.501 - Praia de Belas.
+	  	Palácio Piratini - Praça Marechal Deodoro, s/nº - Centro.
           Fundação de Assistência Social e Esporte (FASE):
-	          Porto Alegre:
-		        Ginásio Municipal de Esportes Alceu Carvalho - Rua Barão de Urussuanga, 1.560 - Passo das Pedras.	
+	  	Porto Alegre:
+		Ginásio Municipal de Esportes Alceu Carvalho - Rua Barão de Urussuanga, 1.560 - Passo das Pedras.	
           Postos de coleta em órgãos públicos:
-	          Prefeituras Municipais: Diversas prefeituras no Rio Grande do Sul estão recebendo doações.
-	          Câmaras de Vereadores: Algumas Câmaras de Vereadores também estão servindo como pontos de coleta de doações.
+	  	Prefeituras Municipais: Diversas prefeituras no Rio Grande do Sul estão recebendo doações.
+	  	Câmaras de Vereadores: Algumas Câmaras de Vereadores também estão servindo como pontos de coleta de doações.
           Instituições de caridade:
-            Cruz Vermelha Brasileira: http://www.cruzvermelha.org.br/pb/institucional/doacoes/
-            Caritas Arquidiocesana de Porto Alegre: https://rs.caritas.org.br/
-            Legião da Boa Vontade: https://lbv.org/
+            	Cruz Vermelha Brasileira: http://www.cruzvermelha.org.br/pb/institucional/doacoes/
+            	Caritas Arquidiocesana de Porto Alegre: https://rs.caritas.org.br/
+            	Legião da Boa Vontade: https://lbv.org/
           Campanhas de doação online:
-            VOAA: https://voaa.me/
-            Benfeitoria: https://benfeitoria.com/."}
+            	VOAA: https://voaa.me/
+            	Benfeitoria: https://benfeitoria.com/.
+	"}
   
   DOCUMENT3 = {
-      "Título": "Mudança de marchas",
-      "Conteúdo": "Seu Googlecar tem uma transmissão automática. Para trocar as marchas, basta mover a alavanca de câmbio para a posição desejada.  Park (Estacionar): Essa posição é usada quando você está estacionado. As rodas são travadas e o carro não pode se mover. Marcha à ré: Essa posição é usada para dar ré. Neutro: Essa posição é usada quando você está parado em um semáforo ou no trânsito. O carro não está em marcha e não se moverá a menos que você pressione o pedal do acelerador. Drive (Dirigir): Essa posição é usada para dirigir para frente. Low: essa posição é usada para dirigir na neve ou em outras condições escorregadias."}
+      "Título": "O que doar",
+      "Conteúdo": "
+		Alimentos: Alimentos não perecíveis, como enlatados, massas, arroz, feijão, leite em pó e óleo.
+		Água potável: Garrafas de água mineral ou água potável em galões.
+		Itens de higiene pessoal: Sabonete, shampoo, creme dental, escova de dentes, desodorante, papel higiênico e fraldas infantis.
+		Itens de limpeza: Detergente, água sanitária, vassouras, rodos e panos de chão.
+		Roupas e calçados: Roupas e calçados em bom estado para todas as idades.
+		Cobertores e colchões: Cobertores, mantas e colchões para auxiliar no abrigo das vítimas.
+		Utensílios domésticos: Pratos, copos, talheres, panelas e outros utensílios básicos para cozinha.
+		Lembre-se:Antes de doar, verifique se os itens estão em boas condições e adequados para o uso pelas vítimas das enchentes.
+		Ao doar roupas e calçados, certifique-se de que estejam limpos e secos.
+		Organize as doações por tipo de item para facilitar a triagem e distribuição.
+		Se possível, doe dinheiro. As doações em dinheiro permitem que as organizações humanitárias comprem os itens mais necessários no momento.
+"}
   
   documents = [DOCUMENT1, DOCUMENT2, DOCUMENT3]
 ```
