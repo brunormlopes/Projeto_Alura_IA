@@ -1,6 +1,6 @@
 # Projeto de IA para apoio a situaçãoes de desastre.
 
-Este projeto utiliza as LLMS e IA Generativa para analisar documentos relacionados a uma crise e dar respostas rapidas as pessoas prejudicadas e seus colaboradores
+Este projeto utiliza as LLMS e IA Generativa para analisar documentos relacionados a uma crise e dar respostas rápidas às pessoas atingidas e todos que se propuserem a ajudar.
 
 ## Pré-requisitos
 
@@ -30,11 +30,16 @@ for m in genai.list_models():
   if 'embedContent' in m.supported_generation_methods:
     print(m.name)
 ```
-## Documentos para busca 
+## Documentos de auxilio
 ```bash
   DOCUMENT1 = {
-      "Título": "Operação do sistema de controle climático",
-      "Conteúdo": "O Googlecar tem um sistema de controle climático que permite ajustar a temperatura e o fluxo de ar no carro. Para operar o sistema de controle climático, use os botões e botões localizados no console central.  Temperatura: O botão de temperatura controla a temperatura dentro do carro. Gire o botão no sentido horário para aumentar a temperatura ou no sentido anti-horário para diminuir a temperatura. Fluxo de ar: O botão de fluxo de ar controla a quantidade de fluxo de ar dentro do carro. Gire o botão no sentido horário para aumentar o fluxo de ar ou no sentido anti-horário para diminuir o fluxo de ar. Velocidade do ventilador: O botão de velocidade do ventilador controla a velocidade do ventilador. Gire o botão no sentido horário para aumentar a velocidade do ventilador ou no sentido anti-horário para diminuir a velocidade do ventilador. Modo: O botão de modo permite que você selecione o modo desejado. Os modos disponíveis são: Auto: O carro ajustará automaticamente a temperatura e o fluxo de ar para manter um nível confortável. Cool (Frio): O carro soprará ar frio para dentro do carro. Heat: O carro soprará ar quente para dentro do carro. Defrost (Descongelamento): O carro soprará ar quente no para-brisa para descongelá-lo."}
+      "Título": "Abrigos para Vítimas das Enchentes no Rio Grande do Sul",
+      "Conteúdo": "Introdução: As fortes chuvas que atingiram o Rio Grande do Sul em maio de 2024 causaram inundações e deslocamentos em massa, afetando milhares de pessoas. Para auxiliar na resposta a esse   desastre, diversos abrigos foram criados em todo o estado para acolher as vítimas das enchentes. Este documento tem como objetivo fornecer um guia completo sobre esses abrigos, incluindo informações sobre sua localização, serviços oferecidos e como entrar em contato. Localização dos Abrigos: Abrigos foram instalados em diversos municípios do Rio Grande do Sul, com foco nas áreas mais afetadas pelas inundações. Uma lista completa e atualizada dos abrigos, incluindo seus endereços e informações de contato, pode ser encontrada nos seguintes sites: Secretaria da Segurança Pública do Rio Grande do Sul: https://www.ssp.rs.gov.br/
+Defesa Civil do Rio Grande do Sul: [URL inválido removido], Cruz Vermelha Brasileira: https://www.cruzvermelha.org.br/ .Serviços Oferecidos: Os abrigos para vítimas das enchentes no Rio Grande do Sul oferecem uma variedade de serviços essenciais para atender às necessidades básicas dos desabrigados. Entre os serviços oferecidos, estão: Alojamento: As pessoas desabrigadas podem dormir em camas ou colchões em um ambiente seguro e protegido. Alimentação: Três refeições por dia são fornecidas aos abrigados, além de lanches entre as refeições. Cuidados médicos: Equipes médicas estão disponíveis nos abrigos para fornecer atendimento médico e odontológico básico. Apoio psicológico: Psicólogos e assistentes sociais estão disponíveis para oferecer apoio emocional e psicológico aos abrigados.
+Serviços sociais: Assistentes sociais podem ajudar os abrigados a entrar em contato com familiares e amigos, obter documentos perdidos e acessar outros serviços de assistência social.
+Como Entrar em Contato: Secretaria da Segurança Pública do Rio Grande do Sul: (51) 3289-3100. Defesa Civil do Rio Grande do Sul: 0800-643-1992. Cruz Vermelha Brasileira: (51) 3217-4500. Informações Adicionais:
+Doações: Se você deseja ajudar as vítimas das enchentes no Rio Grande do Sul, você pode fazer doações em dinheiro ou itens de primeira necessidade para as organizações humanitárias que estão atuando no estado.
+Voluntariado: Você também pode se voluntariar para ajudar nos abrigos ou em outras atividades de apoio às vítimas das enchentes."}
   
   DOCUMENT2 = {
       "Título": "Touchscreen",
