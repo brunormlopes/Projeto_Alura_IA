@@ -1,6 +1,6 @@
 # Projeto de IA para apoio a situaçãoes de desastre.
 
-Este projeto utiliza as LLMS e IA Generativa para analisar documentos relacionados a uma crise e dar respostas rápidas às pessoas atingidas e todos que se propuserem a ajudar. Vamos usar o caso da atual tragédia do Rio Grande do Sul para exemplificar, onde serão inputados textos mais próximos da realidade, com o objetivo de responder adequadamente ajudando os as pessoas que precisam de informaçãoes o mais rápido possível.
+Este projeto utiliza as LLMS e IA Generativa para analisar documentos relacionados a uma crise e dar respostas rápidas às pessoas atingidas e todos que se propuserem a ajudar. Vamos usar o caso da atual tragédia do Rio Grande do Sul para exemplificar, onde serão inputados textos mais próximos da realidade, com o objetivo de responder adequadamente ajudando os as pessoas que precisam de informaçãoes o mais rápido possível. Uma pessoa que precise saber o que doar ou onde coletar uma doação, pode encontrar essa informação de maneira mais rápido e mais agradável.
 
 ## Pré-requisitos
 
@@ -30,7 +30,7 @@ for m in genai.list_models():
   if 'embedContent' in m.supported_generation_methods:
     print(m.name)
 ```
-## Documentos informativos
+## Documentos de exemplo:
 ```bash
   DOCUMENT1 = {
       "Título": "Abrigos para Vítimas das Enchentes no Rio Grande do Sul",
@@ -79,49 +79,15 @@ Voluntariado: Você também pode se voluntariar para ajudar nos abrigos ou em ou
 		Se possível, doe dinheiro. As doações em dinheiro permitem que as organizações humanitárias comprem os itens mais necessários no momento.
 "}
   
-  documents = [DOCUMENT1, DOCUMENT2, DOCUMENT3]
-```
-## Criando um dataframe com os documentos anteriores
-```bash
-df = pd.DataFrame(documents)
-df.columns = ["Titulo", "Conteudo"]
-df
 ```
 ## Definindo o modelo do google AI para text embedding
 ```bash
 model = "models/embedding-001"
 ```
-## Realizando o Embedding
+## O usuário do sistema interage com o mesmo através do prompt com sua dúvida.
 ```bash
-def embed_fn(title, text):
-  return genai.embed_content(model=model,
-                                 content=text,
-                                 title=title,
-                                 task_type="RETRIEVAL_DOCUMENT")["embedding"]
-```
-## Adiciona ao Data Frame os Embeddings, criando uma nova coluna 
-```bash
-  df["Embeddings"] = df.apply(lambda row: embed_fn(row["Titulo"], row["Conteudo"]), axis=1)
-  df
-```
-## Função para comparar a consulta do usuario com os textos
-```bash
-  def gerar_e_buscar_consulta(consulta, base, model):
-  embedding_da_consulta = genai.embed_content(model=model,
-                                 content=consulta,
-                                 task_type="RETRIEVAL_QUERY")["embedding"]
+Exmeplo: O que posso doar?
 
-  produtos_escalares = np.dot(np.stack(df["Embeddings"]), embedding_da_consulta)
-
-  indice = np.argmax(produtos_escalares)
-  return df.iloc[indice]["Conteudo"]
-```
-## Chama a função passando o prompt (consulta do usuário), o data frame e o modelo
-```bash
-prompt = input('Esperando Prompt: ')
-
-trecho = gerar_e_buscar_consulta(prompt, df, model)
-print(trecho)
 ```
 ## Configurações do Gemini para nova busca
 ```bash
@@ -139,4 +105,23 @@ print(trecho)
   response = model_2.generate_content(prompt)
   print(response.text)
 
+```
+## Com base no exemplo de consulta o usuario deve receber: 
+```bash
+	**O que doar para ajudar as vítimas das enchentes:**
+	
+	* **Alimentos:** Enlatados, massas, arroz, feijão, leite em pó e óleo
+	* **Água:** Garrafas de água mineral ou galões de água potável
+	* **Higiene pessoal:** Sabonete, shampoo, creme dental, escova de dentes, desodorante, papel higiênico e fraldas
+	* **Limpeza:** Detergente, água sanitária, vassouras, rodos e panos de chão
+	* **Roupas e calçados:** Em bom estado, para todas as idades
+	* **Abrigo:** Cobertores, mantas e colchões
+	* **Cozinha:** Pratos, copos, talheres, panelas e outros utensílios básicos
+	
+	**Dicas:**
+	
+	* Verifique se os itens estão em boas condições antes de doar.
+	* Lave e seque as roupas e calçados antes de doar.
+	* Organize as doações por tipo para facilitar a distribuição.
+	* Se possível, doe dinheiro. Isso permite que as organizações comprem os itens mais necessários.
 ```
