@@ -34,7 +34,7 @@ for m in genai.list_models():
 ```bash
   DOCUMENT1 = {
       "Título": "Abrigos para Vítimas das Enchentes no Rio Grande do Sul",
-      "Conteúdo": "Introdução: As fortes chuvas que atingiram o Rio Grande do Sul em maio de 2024 causaram inundações e deslocamentos em massa, afetando milhares de pessoas. Para auxiliar na resposta a esse   desastre, diversos abrigos foram criados em todo o estado para acolher as vítimas das enchentes. Este documento tem como objetivo fornecer um guia completo sobre esses abrigos, incluindo informações sobre sua localização, serviços oferecidos e como entrar em contato. Localização dos Abrigos: Abrigos foram instalados em diversos municípios do Rio Grande do Sul, com foco nas áreas mais afetadas pelas inundações. Uma lista completa e atualizada dos abrigos, incluindo seus endereços e informações de contato, pode ser encontrada nos seguintes sites: Secretaria da Segurança Pública do Rio Grande do Sul: https://www.ssp.rs.gov.br/
+      "Conteúdo": "Para auxiliar na resposta ao desastre, diversos abrigos foram criados em todo o estado para acolher as vítimas das enchentes. Este documento tem como objetivo fornecer um guia completo sobre esses abrigos, incluindo informações sobre sua localização, serviços oferecidos e como entrar em contato. Localização dos Abrigos: Abrigos foram instalados em diversos municípios do Rio Grande do Sul, com foco nas áreas mais afetadas pelas inundações. Localização: Porto Alegre: Clube Geraldo Santana - Rua Luiz de Camões, 337 – bairro Santo Antônio. Canoas Ulbra: Av. Farroupilha, 8.001 – bairro São JoséUma. Lista completa e atualizada dos abrigos, incluindo seus endereços e informações de contato, pode ser encontrada nos seguintes sites: Secretaria da Segurança Pública do Rio Grande do Sul: https://www.ssp.rs.gov.br/
 Defesa Civil do Rio Grande do Sul: [URL inválido removido], Cruz Vermelha Brasileira: https://www.cruzvermelha.org.br/ .Serviços Oferecidos: Os abrigos para vítimas das enchentes no Rio Grande do Sul oferecem uma variedade de serviços essenciais para atender às necessidades básicas dos desabrigados. Entre os serviços oferecidos, estão: Alojamento: As pessoas desabrigadas podem dormir em camas ou colchões em um ambiente seguro e protegido. Alimentação: Três refeições por dia são fornecidas aos abrigados, além de lanches entre as refeições. Cuidados médicos: Equipes médicas estão disponíveis nos abrigos para fornecer atendimento médico e odontológico básico. Apoio psicológico: Psicólogos e assistentes sociais estão disponíveis para oferecer apoio emocional e psicológico aos abrigados.
 Serviços sociais: Assistentes sociais podem ajudar os abrigados a entrar em contato com familiares e amigos, obter documentos perdidos e acessar outros serviços de assistência social.
 Como Entrar em Contato: Secretaria da Segurança Pública do Rio Grande do Sul: (51) 3289-3100. Defesa Civil do Rio Grande do Sul: 0800-643-1992. Cruz Vermelha Brasileira: (51) 3217-4500. Informações Adicionais:
@@ -42,8 +42,24 @@ Doações: Se você deseja ajudar as vítimas das enchentes no Rio Grande do Sul
 Voluntariado: Você também pode se voluntariar para ajudar nos abrigos ou em outras atividades de apoio às vítimas das enchentes."}
   
   DOCUMENT2 = {
-      "Título": "Touchscreen",
-      "Conteúdo": "O seu Googlecar tem uma grande tela sensível ao toque que fornece acesso a uma variedade de recursos, incluindo navegação, entretenimento e controle climático. Para usar a tela sensível ao toque, basta tocar no ícone desejado.  Por exemplo, você pode tocar no ícone \"Navigation\" (Navegação) para obter direções para o seu destino ou tocar no ícone \"Music\" (Música) para reproduzir suas músicas favoritas."}
+      "Título": "Centros de doação oficiais",
+      "Conteúdo": "Defesa Civil do Rio Grande do Sul:
+	        Porto Alegre: 
+		          Centro Administrativo Fernando Ferrari (Caff) - Avenida Borges de Medeiros, 1.501 - Praia de Belas.
+		          Palácio Piratini - Praça Marechal Deodoro, s/nº - Centro.
+          Fundação de Assistência Social e Esporte (FASE):
+	          Porto Alegre:
+		        Ginásio Municipal de Esportes Alceu Carvalho - Rua Barão de Urussuanga, 1.560 - Passo das Pedras.	
+          Postos de coleta em órgãos públicos:
+	          Prefeituras Municipais: Diversas prefeituras no Rio Grande do Sul estão recebendo doações.
+	          Câmaras de Vereadores: Algumas Câmaras de Vereadores também estão servindo como pontos de coleta de doações.
+          Instituições de caridade:
+            Cruz Vermelha Brasileira: http://www.cruzvermelha.org.br/pb/institucional/doacoes/
+            Caritas Arquidiocesana de Porto Alegre: https://rs.caritas.org.br/
+            Legião da Boa Vontade: https://lbv.org/
+          Campanhas de doação online:
+            VOAA: https://voaa.me/
+            Benfeitoria: https://benfeitoria.com/."}
   
   DOCUMENT3 = {
       "Título": "Mudança de marchas",
