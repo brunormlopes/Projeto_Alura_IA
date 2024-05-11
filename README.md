@@ -1,6 +1,6 @@
-# Geração de texto com Gemini API & Google AI Studio
+# Projeto de IA para apoio a situaçãoes de desastre.
 
-Este repositório demonstra como usar a Gemini API e o Google AI Studio para gerar texto de forma criativa e informativa.
+Este projeto utiliza as LLMS e IA Generativa para analisar documentos relacionados a uma crise e dar respostas rapidas as pessoas prejudicadas e seus colaboradores
 
 ## Pré-requisitos
 
